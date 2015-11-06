@@ -111,10 +111,10 @@ def deepdream(net, base_img, iter_n=10, octave_n=4, octave_scale=1.4,
     return deprocess(net, src.data[0])
     
 # Here is my own image. 
-img = np.float32(PIL.Image.open('Cardiac.jpg'))
+img = np.float32(PIL.Image.open('Normal.jpg'))
 showarray(img)
 #_=deepdream(net, img)
-_=deepdream(net, img, end='inception_5b/3x3_reduce')
+#_=deepdream(net, img, end='inception_5b/3x3_reduce')
 #net.blobs.keys()
 
 '''
@@ -133,7 +133,7 @@ for i in xrange(100):
 '''
  
 # Guide the image to our method
-guide = np.float32(PIL.Image.open('Bamboo.jpg'))
+guide = np.float32(PIL.Image.open('Green.jpg'))
 showarray(guide)
 
 end = 'inception_3b/output'
